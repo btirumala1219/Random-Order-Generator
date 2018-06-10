@@ -38,88 +38,29 @@ function noHighlightGrade(row){
 }
 
 function submit(){
-  var numClass = 0;
-  var totalcreds = 0;
-  for(var i = 1; i<=6; i++){
-    for(var k = 1; k<=5; k++){
-      if(document.getElementById("cb" + i +""+k).style.background == "rgb(218, 165, 32)"){
-        numClass++;
-        switch(k) {
-          case 1:
-              totalcreds += 2;
-              break;
-          case 2:
-              totalcreds += 3;
-              break;
-          case 3:
-              totalcreds += 4;
-              break;
-          case 4:
-              totalcreds += 5;
-              break;
-          case 5:
-              totalcreds += 6;
-              break;
-        }
-      }
-    }
+  console.log("check");
+  var nums = [1,2,3,4,5,6,7,8,9,10,11,12]
+  var shufnums = shuffle(nums);
+  console.log(shufnums);
+
+
+}
+
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
   }
 
-  var sum = 0;
-
-  for(var j = 1; j<=numClass; j++){
-    for(var k = 1; k<=5; k++){
-      if(document.getElementById("cb" + j +""+k).style.background == "rgb(218, 165, 32)"){
-        for(var q = 1; q<=12; q++){
-          if(document.getElementById("gb" + j +""+q).style.background == "rgb(218, 165, 32)"){
-            var tmp = k+1;
-            switch(q) {
-              case 1:
-                  sum += (tmp*4);
-                  break;
-              case 2:
-                  sum += (tmp*3.75);
-                  break;
-              case 3:
-                  sum += (tmp*3.25);
-                  break;
-              case 4:
-                  sum += (tmp*3);
-                  break;
-              case 5:
-                  sum += (tmp*2.75);
-                  break;
-              case 6:
-                  sum += (tmp*2.25);
-                  break;
-              case 7:
-                  sum += (tmp*2);
-                  break;
-              case 8:
-                  sum += (tmp*1.75);
-                  break;
-              case 9:
-                  sum += (tmp*1.25);
-                  break;
-              case 10:
-                  sum += (tmp*1);
-                  break;
-              case 11:
-                  sum += (tmp*.75);
-                  break;
-              case 12:
-                  sum += (tmp*0);
-                  break;
-            }
-          }
-        }
-      }
-    }
-  }
-
-
-  var answer = sum/totalcreds.toFixed(2);
-  document.getElementById("gpa").innerHTML = answer;
-
-
+  return array;
 }
