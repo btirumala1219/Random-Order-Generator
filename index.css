@@ -15,12 +15,12 @@
   font-size: 18px;
 }
 
-#gpa{
+.gpa{
   position: absolute;
   top: 72%;
   text-align: center;
   left: 350;
-  font-size: 70px;
+  font-size: 30px;
 }
 
 #credits{
@@ -31,7 +31,7 @@
   font-size: 20px;
 }
 
-#grade{
+.grade{
   position: absolute;
   top: 20%;
   width: 120%;

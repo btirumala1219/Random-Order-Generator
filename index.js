@@ -43,7 +43,7 @@ function submit(){
   var shufnums = shuffle(nums);
   console.log(shufnums);
 
-
+  update(shufnums);
 }
 
 function shuffle(array) {
@@ -63,4 +63,9 @@ function shuffle(array) {
   }
 
   return array;
+}
+
+function update(kk){
+  console.log(document.getElementById('text').innerHTML);
+  document.getElementById('text').innerHTML= kk;
 }
