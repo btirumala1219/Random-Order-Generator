@@ -1,7 +1,7 @@
 #background {
   background: #99D2C9;
   width: 800px;
-  height: 800px;
+  height: 400px;
   position: absolute;
   left: 0px;
   top: 0px;
@@ -17,7 +17,7 @@
 
 .gpa{
   position: absolute;
-  top: 72%;
+  top: 30%;
   text-align: center;
   left: 350;
   font-size: 30px;
@@ -41,7 +41,7 @@
 
 #submit{
   position: absolute;
-  top: 80%;
+  top: 32%;
   text-align: center;
   left: 110;
   font-size: 30px;
